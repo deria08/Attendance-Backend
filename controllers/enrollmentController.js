@@ -44,11 +44,11 @@ exports.enrollMahasiswa = async (req, res) => {
     }
 
     // validasi semester
-    if (mahasiswa.semester !== course.semester) {
-      return res.status(400).json({
-        message: 'Semester mahasiswa tidak sesuai'
-      });
-    }
+    // if (mahasiswa.semester !== course.semester) {
+    //   return res.status(400).json({
+    //     message: 'Semester mahasiswa tidak sesuai'
+    //   });
+    // }
 
     // cek enrollment duplicate
     const existing = await Enrollment.findOne({
